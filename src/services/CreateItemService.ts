@@ -12,8 +12,6 @@ export class CreateItemService {
 
   public async execute (data: IItemData): Promise<Item> {
     const { item, price } = data
-
-    // Validations
     await itemValidator.validateCreateItem({ item, price })
 
     const createItem = this.itemRepository.create({

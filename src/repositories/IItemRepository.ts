@@ -7,4 +7,5 @@ export interface IItemRepository {
   findAll: () => Item[]
   findOne: (itemID: number) => Item
   deleteOne: (itemID: number) => void
+  save: (item: Item) => Item
 }

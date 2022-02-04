@@ -1,4 +1,5 @@
 import { CreateItemService } from '@services/CreateItemService'
+import { UpdateItemService } from '@services/UpdateItemService'
 import { DeleteItemService } from '@services/DeleteItemService'
 import { GetItemService } from '@services/GetItemService'
 import { ListItemsService } from '@services/ListItemsService'
@@ -10,6 +11,10 @@ const itemRepository = new ItemRepositoryInMemory()
 
 export const createItemServiceFactory = (): CreateItemService => {
   return new CreateItemService(itemRepository)
+}
+
+export const updateItemServiceFactory = (): UpdateItemService => {
+  return new UpdateItemService(itemRepository)
 }
 
 export const listItemsServiceFactory = (): ListItemsService => {
