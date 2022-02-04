@@ -6,4 +6,5 @@ export interface IItemRepository {
   create: (itemData: IItemData) => Item
   findAll: () => Item[]
   findOne: (itemID: number) => Item
+  deleteOne: (itemID: number) => void
 }

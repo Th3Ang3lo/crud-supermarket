@@ -27,4 +27,8 @@ export class ItemRepositoryInMemory implements IItemRepository {
   public findOne (id: number): Item {
     return this.items.find(item => item.id === id)
   }
+
+  public deleteOne (id: number): void {
+    this.items.splice(this.items.findIndex(item => item.id === id), 1)
+  }
 }

@@ -1,4 +1,5 @@
 import { CreateItemService } from '@services/CreateItemService'
+import { DeleteItemService } from '@services/DeleteItemService'
 import { GetItemService } from '@services/GetItemService'
 import { ListItemsService } from '@services/ListItemsService'
 
@@ -17,4 +18,8 @@ export const listItemsServiceFactory = (): ListItemsService => {
 
 export const getItemServiceFactory = (): GetItemService => {
   return new GetItemService(itemRepository)
+}
+
+export const deleteItemServiceFactory = (): DeleteItemService => {
+  return new DeleteItemService(itemRepository)
 }

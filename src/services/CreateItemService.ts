@@ -3,7 +3,7 @@ import { IItemData } from '@shared/dtos/item'
 
 import { IItemRepository } from 'repositories/IItemRepository'
 
-import * as createItemValidator from '@shared/validations/itemValidator'
+import * as itemValidator from '@shared/validations/itemValidator'
 
 export class CreateItemService {
   constructor (
@@ -14,7 +14,7 @@ export class CreateItemService {
     const { item, price } = data
 
     // Validations
-    await createItemValidator.validateCreateItem({ item, price })
+    await itemValidator.validateCreateItem({ item, price })
 
     const createItem = this.itemRepository.create({
       item,
