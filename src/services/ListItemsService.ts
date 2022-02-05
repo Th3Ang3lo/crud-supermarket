@@ -1,6 +1,6 @@
 import { Item } from '@models/Item'
 
-import { IItemRepository } from 'repositories/IItemRepository'
+import { IItemRepository } from '@repositories/IItemRepository'
 
 export class ListItemsService {
   constructor (

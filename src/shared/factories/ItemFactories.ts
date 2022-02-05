@@ -4,7 +4,7 @@ import { DeleteItemService } from '@services/DeleteItemService'
 import { GetItemService } from '@services/GetItemService'
 import { ListItemsService } from '@services/ListItemsService'
 
-import { ItemRepositoryInMemory } from 'repositories/ItemRepositoryInMemory'
+import { ItemRepositoryInMemory } from '@repositories/ItemRepositoryInMemory'
 
 // to persist datas in memory
 const itemRepository = new ItemRepositoryInMemory()

@@ -1,7 +1,7 @@
 import { Item } from '@models/Item'
 import { IItemData } from '@shared/dtos/item'
 
-import { IItemRepository } from 'repositories/IItemRepository'
+import { IItemRepository } from '@repositories/IItemRepository'
 
 import * as itemValidator from '@shared/validations/itemValidator'
 
